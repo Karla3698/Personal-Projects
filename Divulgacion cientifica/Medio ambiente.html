@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divulgación Científica</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="medio ambiente.css">
+    
+   
+</head>
+<body>
+    
+   <header id="header">
+        <img class="dc" src="DC.jpg" />
+      
+       <ul>
+            <li><a href="Index.html" class="active">Inicio</a></li>
+           <li><a href="Astronomia.html">Astronomia</a></li>
+           <li><a href="Fisica.html">Fisica</a></li>
+           <li><a href="Medio ambiente.html">Medioambiente</a></li>
+       </ul>
+    
+   </header>
+   <section>
+       <h2 id= "text"><span>Es tiempo de</span><br>Descubrir</h2>
+       <img src="bird1.png" id="bird1">
+       <img src="bird2.png" id="bird2">
+       <img src="forest.png" id="forest">
+       <a href="#" id = "btn">Vida</a>
+       <img src="rocks.png" id="rocks">
+       <img src="water.png" id="water">
+   </section>
+   <div class="sec">
+       <h2>algo</h2>
+       <div class="container">
+           <div class="card">
+               <div class="content">
+                   <h3>01</h3>
+                   <h4>La fauna en Chernóbil</h4>
+                   <p>Un estudio confirma que en las áreas más contaminadas hay menos mamíferos.</p>
+                    <a href="m1.html">Leer más</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h3>02</h3>
+                    <h4>Joyas históricas</h4>
+                    <p>Los diamantes imperfectos revelan el pasado de la Tierra..</p>
+                     <a href="m2.html">Leer más</a>
+                 </div>
+             </div>
+             <div class="card">
+                <div class="content">
+                    <h3>03</h3>
+                    <h4>Los estragos de la contaminación lumínica</h4>
+                    <p>Cada vez escasean más los lugares donde domina la oscuridad nocturna. La luz artificial perturba de muchas maneras la vida animal, hasta el extremo de contribuir al declive general de la biodiversidad.</p>
+                     <a href="m3.html">Leer más</a>
+                 </div>
+             </div>
+        </div>
+   </div>
+   <script type="text/javascript" src="vanilla-tilt.js"></script>
+   
+   <script>VanillaTilt.init(document.querySelectorAll(".card")
+   ,{
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare": 1,
+});</script>
+   
+   <script>
+       let text = document.getElementById('text');
+       let bird1 = document.getElementById('bird1');
+       let bird2 = document.getElementById('bird2');
+       let btn = document.getElementById('btn');
+       let rocks = document.getElementById('rocks');
+       let forest = document.getElementById('forest');
+       let water = document.getElementById('water');
+       let header = document.getElementById('header');
+
+       window.addEventListener('scroll', function(){
+           let value = window.scrollY;
+
+           text.style.top = 50 + value * -0.5 + '%';
+           bird1.style.top = value * -1.5 + 'px';
+           bird1.style.left = value * 2 + 'px';
+           bird2.style.top = value * -1.5 + 'px';
+           bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+     })
+   </script>
+</body>
+</html>

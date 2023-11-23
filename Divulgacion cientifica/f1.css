@@ -1,0 +1,66 @@
+body{
+    margin: 0cm;
+}
+
+.cover{
+    height: 400px;
+    
+    color:white;
+    font-size: 20px;
+    background-image: url("ket.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode:darken ;
+}
+
+.cover-small{
+    height: 200px;
+    background-blend-mode: normal;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    
+}
+header .logo{
+    color: #fff;;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+    
+
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: #fff;
+}
+header ul  li a:hover , 
+header ul  li a.active{
+    background:#fff;
+    color: #2b1055;
+
+}
+p{
+   font-size: larger;
+}
